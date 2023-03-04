@@ -7,11 +7,19 @@
   "license": "MIT",
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "express": "^4.18.2",
     "typescript": "^4.9.5"
   }
 =======
     "express": "^4.18.2"
+=======
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ts-node-dev": "^2.0.0"
+>>>>>>> developer
   },
   "bugs": {
     "url": "https://github.com/SilasEduardo/API_REST_TS/issues"
@@ -34,6 +42,7 @@
     "typescript": "*"
   },
   "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
