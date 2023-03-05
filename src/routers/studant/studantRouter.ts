@@ -5,9 +5,9 @@ const studantRouters = Router();
 const studantRepositore = new StudantRepositore()
 studantRouters.post("/", (request, response)=> {
 
-   const {firtName, lestName, age, create_at} = request.body;
+   const {firtName, lestName, age, email} = request.body;
 
-   const newStutant = studantRepositore.create({firtName, lestName, age});
+   const newStutant = studantRepositore.create({firtName, lestName, age, email});
 
    
 

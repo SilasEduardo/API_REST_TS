@@ -1,6 +1,5 @@
 class CreateStudantUseCase {
   constructor(){}
-  
   execute(){
 
   }
