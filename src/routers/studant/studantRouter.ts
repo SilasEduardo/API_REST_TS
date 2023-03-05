@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { StudantRepositore } from '../../modules/studant/repositorios/SdutantRepositore';
+import { createStudantController } from '../../modules/studant/useCases/createStudants';
 
 const studantRouters = Router();
-const studantRepositore = new StudantRepositore()
 studantRouters.post("/", (request, response)=> {
+  createStudantController.handle(request, response)
 })
 
 export { studantRouters };

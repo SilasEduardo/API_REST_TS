@@ -8,9 +8,11 @@ class CreateStudantController {
 
   handle(request: Request, response: Response){
     const {firtName, lestName, age, email} = request.body;
-     const studant = this.createStudantUseCase.execute({firtName, lestName, age, email}) 
-    response.status(201).json(studant);
+     this.createStudantUseCase.execute({firtName, lestName, age, email}) 
+    response.status(201).json();
    
 
   }
 }
+
+export { CreateStudantController }
