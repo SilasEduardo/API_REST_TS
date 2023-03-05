@@ -3,12 +3,12 @@ import {v4 as uuidv4} from  'uuid'
 
 class Studant {
 
-id?: string;
-firstName: string;
-lestName: string;
-age: number;
-status: boolean;
-create_ad: Date;
+  id?: string;
+  firstName!: string;
+  lestName!: string;
+  age!: number;
+  status!: boolean;
+  create_ad!: Date;
 
 
 constructor(){
