@@ -7,11 +7,11 @@ studantRouters.post("/", (request, response)=> {
 
    const {firtName, lestName, age, email} = request.body;
 
-   const newStutant = studantRepositore.create({firtName, lestName, age, email});
+   
 
    
 
-   response.status(201).json(newStutant);
+   response.status(201).json();
   
   
 })
