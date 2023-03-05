@@ -1,11 +1,8 @@
 
 import { Studant } from '../model/Studant'
+import { IStudantsDTO } from './IStudant'
 
-interface IStudantsDTO{
-  firtName: string;
-  lestName: string;
-  age: number;
-} 
+
 
 class StudantRepositore {
  private studants: Studant[]
