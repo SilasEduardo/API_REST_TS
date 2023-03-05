@@ -6,6 +6,7 @@ class Studant {
   id?: string;
   firstName!: string;
   lestName!: string;
+  email!: string;
   age!: number;
   status!: boolean;
   create_ad!: Date;
