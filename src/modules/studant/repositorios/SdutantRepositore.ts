@@ -2,20 +2,6 @@
 import { Studant } from '../model/Studant'
 import { IStudantRepositores, IStudantsDTO } from './IStudantRepositores'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-class StudantRepositore {
-
-  
-=======
-interface IStudantsDTO{
-  firtName: string;
-  lestName: string;
-  age: number;
-} 
-=======
->>>>>>> developer
-
 
 class StudantRepositore implements IStudantRepositores {
  private studants: Studant[]
@@ -45,7 +31,6 @@ class StudantRepositore implements IStudantRepositores {
 
    return studant
  }
->>>>>>> developer
 
 }
 
