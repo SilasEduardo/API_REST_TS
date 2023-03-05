@@ -1,10 +1,10 @@
 
 import { Studant } from '../model/Studant'
-import { IStudantsDTO } from './IStudant'
+import { IStudantRepositores, IStudantsDTO } from './IStudantRepositores'
 
 
 
-class StudantRepositore {
+class StudantRepositore implements IStudantRepositores {
  private studants: Studant[]
 
  constructor(){
