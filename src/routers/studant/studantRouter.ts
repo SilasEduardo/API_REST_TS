@@ -9,13 +9,10 @@ studantRouters.post("/", (request, response)=> {
   createStudantController.handle(request, response)
 })
 
-<<<<<<< HEAD
 studantRouters.get("/", (request, response)=> {
   
 })
 
-
-=======
 
 studantRouters.get("/", (request, response)=> {
   liststudantController.handle(request, response)
@@ -32,7 +29,4 @@ studantRouters.delete("/:id", (request, response)=> {
 
 
 
-
-
->>>>>>> developer
 export { studantRouters };
