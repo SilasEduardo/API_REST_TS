@@ -10,6 +10,7 @@ interface IStudantsDTO{
 interface IStudantRepositores {
   create({firtName, lestName, age}: IStudantsDTO): void;
   findName(email: string): Studant | undefined;
+  list(): Studant[];
 }
 
 export { IStudantRepositores, IStudantsDTO }
