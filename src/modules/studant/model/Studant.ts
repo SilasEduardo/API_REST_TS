@@ -13,7 +13,7 @@ class Studant {
 
 
 constructor(){
-  if(this.id){
+  if(!this.id){
     this.id = uuidv4()
   }
 }

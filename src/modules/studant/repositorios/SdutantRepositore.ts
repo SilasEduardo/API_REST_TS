@@ -31,6 +31,22 @@ class StudantRepositore implements IStudantRepositores {
    this.studants.push(studant)
  }
 
+ update(id: any, {firtName, lestName, age, email }: IStudantsDTO ){
+
+  if(!id){
+    throw new Error("Studant not exists")
+  }
+
+  const studantExists = this.studants.find(studant => studant.id === id);
+
+  if(!studantExists){
+    throw new Error("Studant not exists")
+  };
+
+  Object.assign(studantExists, {firtName, lestName, age, email })
+
+ }
+
 list(): Studant[] {
   return this.studants
 }
