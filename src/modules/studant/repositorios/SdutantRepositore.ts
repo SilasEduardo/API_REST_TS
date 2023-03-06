@@ -47,6 +47,25 @@ class StudantRepositore implements IStudantRepositores {
 
  }
 
+ delete(id: any){
+  if(!id){
+    throw new Error("Studant not exists")
+  }
+
+  const studantExists = this.studants.find(studant => studant.id === id);
+
+  if(!studantExists){
+    throw new Error("Studant not exists")
+  };
+
+  this.studants.forEach((studant, index)=> {
+      if(studant.id === studantExists.id){
+        this.studants.splice(index, 1)
+      }
+  }) 
+  
+ }
+
 list(): Studant[] {
   return this.studants
 }

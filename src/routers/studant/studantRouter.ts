@@ -18,5 +18,12 @@ studantRouters.put("/:id", (request, response)=> {
 })
 
 
+studantRouters.delete("/:id", (request, response)=> {
+  updateStudantController.handle(request, response)
+})
+
+
+
+
 
 export { studantRouters };
