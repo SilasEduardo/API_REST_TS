@@ -5,9 +5,11 @@ class DeleteStudantsController {
   constructor(private deleteStudantsUseCase: DeleteStudantsUseCase){}
   handle(request: Request, response: Response){
 
-    const id = request.params.id
+    const id = request.params.id;
 
-    this.deleteStudantsUseCase.excute(id)
+    this.deleteStudantsUseCase.excute(id);
+
+   return response.status(201).json();
   }
 }
 

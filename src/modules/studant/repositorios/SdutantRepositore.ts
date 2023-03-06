@@ -57,10 +57,9 @@ class StudantRepositore implements IStudantRepositores {
   if(!studantExists){
     throw new Error("Studant not exists")
   };
-
   this.studants.forEach((studant, index)=> {
       if(studant.id === studantExists.id){
-        this.studants.splice(index, 1)
+       return this.studants.splice(index, 1)
       }
   }) 
   
