@@ -6,4 +6,9 @@ studantRouters.post("/", (request, response)=> {
   createStudantController.handle(request, response)
 })
 
+studantRouters.get("/", (request, response)=> {
+  
+})
+
+
 export { studantRouters };
