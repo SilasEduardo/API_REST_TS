@@ -10,7 +10,7 @@ studantRouters.post("/", (request, response)=> {
 })
 
 studantRouters.get("/", (request, response)=> {
-  
+  liststudantController.handle(request, response)
 })
 
 
