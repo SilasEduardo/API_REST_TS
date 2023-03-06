@@ -29,9 +29,11 @@ class StudantRepositore implements IStudantRepositores {
   })
 
    this.studants.push(studant)
-
-   return studant
  }
+
+list(): Studant[] {
+  return this.studants
+}
 
 }
 

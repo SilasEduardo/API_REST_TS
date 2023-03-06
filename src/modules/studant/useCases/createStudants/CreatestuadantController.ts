@@ -13,6 +13,7 @@ class CreateStudantController {
    
 
   }
+  
 }
 
 export { CreateStudantController }
