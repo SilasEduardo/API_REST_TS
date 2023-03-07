@@ -1,10 +1,8 @@
 import { CreateStudantController } from './CreatestuadantController';
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository';
+import { StudantRepository } from '../../repositorios/implementation/SdutantRepository';
 import { CreateStudantUseCase } from './CreateStudatUseCase';
 
-
-const studantRepositore = new StudantRepositore()
-const createStudantUseCase = new CreateStudantUseCase(StudantRepositore.getIsnstance());
+const createStudantUseCase = new CreateStudantUseCase(StudantRepository.getIsnstance());
 const createStudantController = new CreateStudantController(createStudantUseCase);
 
 

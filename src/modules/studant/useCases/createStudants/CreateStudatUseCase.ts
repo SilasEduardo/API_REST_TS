@@ -1,9 +1,9 @@
-import { IStudantRepositores, IStudantsDTO } from '../../repositorios/implementation/interfaces/IStudantRepositores'
+import { IStudantRepositories, IStudantsDTO } from '../../repositorios/interfaces/IStudantRepositories'
 
 
 
 class CreateStudantUseCase {
-  constructor(private studantRepository: IStudantRepositores ){}
+  constructor(private studantRepository: IStudantRepositories ){}
 
   execute({firtName, lestName, age, email}: IStudantsDTO){
 
@@ -16,6 +16,5 @@ class CreateStudantUseCase {
     this.studantRepository.create({firtName, lestName, age, email});
   }
 }
-
 
 export { CreateStudantUseCase }
