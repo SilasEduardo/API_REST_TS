@@ -1,8 +1,5 @@
 import {v4 as uuidv4} from  'uuid'
 
-
-
-
 class Studant {
   firstName: string;
   lestName: string;

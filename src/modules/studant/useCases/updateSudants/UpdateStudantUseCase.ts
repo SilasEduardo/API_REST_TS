@@ -1,4 +1,4 @@
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore'
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository'
 import { IStudantsDTO } from '../../repositorios/implementation/interfaces/IStudantRepositores'
 
 class UpdateStudantUseCase {

@@ -1,5 +1,5 @@
 import { DeleteStudantsController } from './DeleteSudantsController';
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore';
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository';
 import { DeleteStudantsUseCase } from './DeleteStudantUseCase';
 
 

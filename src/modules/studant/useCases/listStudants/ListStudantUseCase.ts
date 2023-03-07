@@ -1,4 +1,4 @@
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore'
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository'
 
 
 

@@ -1,5 +1,5 @@
 import { UpdateStudantController } from './UpdateStudantController';
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore';
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository';
 import { UpdateStudantUseCase } from './UpdateStudantUseCase';
 
 

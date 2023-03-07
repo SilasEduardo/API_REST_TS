@@ -1,5 +1,5 @@
 import { ListstudantController } from './ListStudantController';
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore';
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository';
 import { ListstudantUseCase } from './ListStudantUseCase';
 
 

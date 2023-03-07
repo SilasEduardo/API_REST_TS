@@ -1,21 +1,21 @@
 
 import { Studant } from '../../model/Studant'
-import { IStudantRepositores, IStudantsDTO } from '../interfaces/IStudantRepositores'
+import { IStudantRepositories, IStudantsDTO } from '../interfaces/IStudantRepositories'
 
 
-class StudantRepositore implements IStudantRepositores {
+class StudantRepository implements IStudantRepositories {
   private studants: Studant[]
-  private static INSTANCIE: StudantRepositore;
+  private static INSTANCIE: StudantRepository;
   
  private constructor(){
   this.studants = []
  }
   
- public static getIsnstance(): StudantRepositore {
-  if(!StudantRepositore.INSTANCIE){
-    StudantRepositore.INSTANCIE = new StudantRepositore()
+ public static getIsnstance(): StudantRepository {
+  if(!StudantRepository.INSTANCIE){
+    StudantRepository.INSTANCIE = new StudantRepository()
   }
-  return StudantRepositore.INSTANCIE;
+  return StudantRepository.INSTANCIE;
  } 
 
 
@@ -40,7 +40,7 @@ class StudantRepositore implements IStudantRepositores {
    this.studants.push(studant)
  }
 
- update(id: any, {firtName, lestName, age, email }: IStudantsDTO ){
+ update(id: string, {firtName, lestName, age, email }: IStudantsDTO ){
 
   if(!id){
     throw new Error("Studant not exists")
@@ -56,7 +56,7 @@ class StudantRepositore implements IStudantRepositores {
 
  }
 
- delete(id: any){
+ delete(id: string){
   if(!id){
     throw new Error("Studant not exists")
   }
@@ -80,4 +80,4 @@ list(): Studant[] {
 
 }
 
-export { StudantRepositore}
+export {StudantRepository}
