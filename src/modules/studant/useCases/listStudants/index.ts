@@ -1,9 +1,9 @@
 import { ListstudantController } from './ListStudantController';
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository';
+import { StudantRepository } from '../../repositorios/implementation/SdutantRepository';
 import { ListstudantUseCase } from './ListStudantUseCase';
 
 
-const liststudantUseCase = new ListstudantUseCase(StudantRepositore.getIsnstance())
+const liststudantUseCase = new ListstudantUseCase(StudantRepository.getIsnstance())
 const liststudantController = new ListstudantController(liststudantUseCase)
 
 

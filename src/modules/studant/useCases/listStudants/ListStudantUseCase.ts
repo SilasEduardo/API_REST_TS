@@ -1,9 +1,9 @@
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository'
+import { StudantRepository } from '../../repositorios/implementation/SdutantRepository'
 
 
 
 class ListstudantUseCase {
-  constructor(private studantRepositore: StudantRepositore){}
+  constructor(private studantRepositore: StudantRepository){}
   execute(){
    return this. studantRepositore.list()
   }
