@@ -1,4 +1,4 @@
-import { IStudantRepositores, IStudantsDTO } from '../../repositorios/IStudantRepositores'
+import { IStudantRepositores, IStudantsDTO } from '../../repositorios/implementation/interfaces/IStudantRepositores'
 
 
 
@@ -11,7 +11,6 @@ class CreateStudantUseCase {
 
     if(studantExists){
       throw new Error("Studant already exists")
-      
     }
 
     this.studantRepository.create({firtName, lestName, age, email});

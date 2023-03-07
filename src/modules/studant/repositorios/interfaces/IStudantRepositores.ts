@@ -1,4 +1,4 @@
-import { Studant } from '../model/Studant'
+import { Studant } from '../../model/Studant'
 
 interface IStudantsDTO{
   firtName: string;

@@ -1,19 +1,29 @@
 
-import { Studant } from '../model/Studant'
-import { IStudantRepositores, IStudantsDTO } from './IStudantRepositores'
+import { Studant } from '../../model/Studant'
+import { IStudantRepositores, IStudantsDTO } from '../interfaces/IStudantRepositores'
 
 
 class StudantRepositore implements IStudantRepositores {
- private studants: Studant[]
-
- constructor(){
+  private studants: Studant[]
+  private static INSTANCIE: StudantRepositore;
+  
+ private constructor(){
   this.studants = []
  }
-  findName(email: string): Studant | undefined {
-
-    const studant = this.studants.find(studant => studant.email === email)
-    return studant
+  
+ public static getIsnstance(): StudantRepositore {
+  if(!StudantRepositore.INSTANCIE){
+    StudantRepositore.INSTANCIE = new StudantRepositore()
   }
+  return StudantRepositore.INSTANCIE;
+ } 
+
+
+
+ findName(email: string): Studant | undefined {
+  const studant = this.studants.find(studant => studant.email === email)
+  return studant
+}
 
 
  create({firtName, lestName, age, email }: IStudantsDTO){

@@ -1,11 +1,11 @@
-import { studantRepositore } from '../createStudants'
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore'
 
 
 
 class ListstudantUseCase {
-
+  constructor(private studantRepositore: StudantRepositore){}
   execute(){
-   return studantRepositore.list()
+   return this. studantRepositore.list()
   }
 
 }

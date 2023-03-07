@@ -4,29 +4,29 @@ import { liststudantController } from '../../modules/studant/useCases/listStudan
 import { updateStudantController } from '../../modules/studant/useCases/updateSudants';
 import { deleteStudantsController } from '../../modules/studant/useCases/deleteStudants';
 
-const studantRouters = Router();
-studantRouters.post("/", (request, response)=> {
+const router = Router();
+router.post("/", (request, response)=> {
   createStudantController.handle(request, response)
 })
 
-studantRouters.get("/", (request, response)=> {
+router.get("/", (request, response)=> {
   liststudantController.handle(request, response)
 })
 
 
-studantRouters.get("/", (request, response)=> {
+router.get("/", (request, response)=> {
   liststudantController.handle(request, response)
 });
 
-studantRouters.put("/:id", (request, response)=> {
+router.put("/:id", (request, response)=> {
   updateStudantController.handle(request, response)
 })
 
 
-studantRouters.delete("/:id", (request, response)=> {
+router.delete("/:id", (request, response)=> {
   deleteStudantsController.handle(request, response)
 })
 
 
 
-export { studantRouters };
+export default router

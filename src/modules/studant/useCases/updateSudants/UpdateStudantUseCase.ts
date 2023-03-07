@@ -1,10 +1,11 @@
-import { studantRepositore } from '../createStudants'
-import { IStudantsDTO } from '../../repositorios/IStudantRepositores'
+import { StudantRepositore } from '../../repositorios/implementation/SdutantRepositore'
+import { IStudantsDTO } from '../../repositorios/implementation/interfaces/IStudantRepositores'
 
 class UpdateStudantUseCase {
+  constructor(private studantRepository: StudantRepositore){}
   execute(id: any, {firtName, lestName, email, age}: IStudantsDTO){
 
-    studantRepositore.update(id, {firtName, lestName, email, age})
+    this.studantRepository.update(id, {firtName, lestName, email, age})
   }
 }
 
