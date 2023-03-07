@@ -1,9 +1,9 @@
-import { StudantRepositore } from '../../repositorios/implementation/SdutantRepository'
+import { StudantRepository } from '../../repositorios/implementation/SdutantRepository'
 
 class DeleteStudantsUseCase {
-  constructor(private studantRepositore: StudantRepositore){}
+  constructor(private studantRepositore: StudantRepository){}
 
-  excute(id: any){
+  excute(id: string){
     this.studantRepositore.delete(id)
   }
 
