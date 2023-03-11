@@ -1,0 +1,98 @@
+{
+  "openapi": "3.0.0",
+  "info":{
+    "title": "api School documentation",
+    "description": "This is an API REST",
+    "version": "1.0.0",
+    "contact": {
+      "email": "dani@rocketeseat.com.br"
+    }
+  },
+  "paths":{
+    "/studants": {
+      "post":{
+        "tags":["Studants"],
+        "summary": "Craete a Studants",
+        "description": "Create a new studants",
+        "requestBody":{
+          "content": {
+            "application/json":{
+              "schema":{
+                "type": "objeto",
+                "properties":{
+                  "firtName":{
+                    "type": "string"
+                  },
+                  "lestName":{
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "age": {
+                    "type": "number"
+                  }
+                  
+                },
+                "example": {
+                  "firtName": "Sias",
+                  "lestName": "de Paula",
+                  "email": "dani@rocketeseat.com.br",
+                  "age": 28
+                }
+              }
+            }
+          }
+        },
+        "responses":{
+          "201":{
+            "description": "Create Use"
+          },
+          "500":{
+            "description": "Studant Already exists"
+          }
+        }
+      },
+      "get":{
+        "tags":["Studants"],
+        "summary": "List All Studants",
+        "description": "List All Studants",
+        "responses":{
+          "200":{
+            "description": "Sucess",
+            "contact":{
+              "application/json":{
+                "schema":{
+                  "type":"array",
+                  "items":{
+                    "type":"objeto",
+                    "properties":{
+                      "firtName":{
+                        "type": "string"
+                      },
+                      "lestName":{
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "age": {
+                        "type": "number"
+                      }
+                      
+                    },
+                    "description": {
+                      "type":"string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  
+}
