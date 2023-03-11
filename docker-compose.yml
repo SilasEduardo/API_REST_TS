@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: api_rest_ts
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/user/app
